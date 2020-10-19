@@ -39,10 +39,18 @@ const NonAuthHeader = () => {
       justify="space-between"
       wrap="wrap"
       padding="1.5rem"
+      borderBottom="1px"
     >
       <Flex align="center" mr={5}>
         <Link to={ROUTES.LANDING}>
-          <Heading as="h1" size="lg" letterSpacing={'-.1rem'}>
+          <Heading
+            as="h1"
+            size="lg"
+            letterSpacing={'-.1rem'}
+            rounded="0px 10px 0px 10px"
+            padding="5px"
+            border="1px"
+          >
             Collegiate
           </Heading>
         </Link>
@@ -87,10 +95,18 @@ const AuthHeader = () => {
       justify="space-between"
       wrap="wrap"
       padding="1.5rem"
+      borderBottom="1px"
     >
       <Flex align="center" mr={5}>
         <Link to="/">
-          <Heading as="h1" size="lg" letterSpacing={'-.1rem'}>
+          <Heading
+            as="h1"
+            size="lg"
+            letterSpacing={'-.1rem'}
+            rounded="0px 10px 0px 10px"
+            padding="5px"
+            border="1px"
+          >
             Collegiate
           </Heading>
         </Link>

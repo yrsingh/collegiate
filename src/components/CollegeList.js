@@ -16,7 +16,7 @@ import {
 import { FaMinusCircle, FaPlusCircle } from 'react-icons/fa';
 
 const CollegeListBase = props => {
-  const [collegeResults, setCollegeResults] = useState(null);
+  const [collegeResults, setCollegeResults] = useState([]);
   const [search, setSearch] = useState('');
   const [myCollegeList, setMyCollegeList] = useState([]);
   const [listLoaded, setListLoaded] = useState(false);
@@ -34,7 +34,8 @@ const CollegeListBase = props => {
 
   useEffect(() => {
     props.firebase.user(props.authUser.uid).on('value', snapshot => {
-      setMyCollegeList(snapshot.val().collegeList);
+      if (snapshot.val().collegeList)
+        setMyCollegeList(snapshot.val().collegeList);
       setListLoaded(true);
     });
   }, []);

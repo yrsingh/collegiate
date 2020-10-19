@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import { Flex } from '@chakra-ui/core';
+import { Flex, Text } from '@chakra-ui/core';
 
 import Navigation from './Navigation';
 import LandingPage from './Landing';
@@ -31,6 +31,9 @@ const App = props => {
         <Route path={ROUTES.ACTIVITIES} component={ActivitiesPage} />
         <Route path={ROUTES.ESSAYS} component={EssayPage} />
       </Flex>
+      {/* <Flex justify="center" w="100%" p="1em" bg="gray.300">
+        <Text fontSize="md">&copy; Copyright 2020, Collegiate</Text>
+      </Flex> */}
     </Router>
   );
 };
