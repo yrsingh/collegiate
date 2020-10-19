@@ -1,12 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
 import * as serviceWorker from './serviceWorker';
 import reportWebVitals from './reportWebVitals';
 
+import { ChakraProvider, CSSReset } from '@chakra-ui/core';
+import theme from '@chakra-ui/theme';
+import App from './components/App';
+import Firebase, { FirebaseContext } from './components/Firebase';
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <FirebaseContext.Provider value={new Firebase()}>
+      <ChakraProvider theme={theme}>
+        <CSSReset />
+        <App />
+      </ChakraProvider>
+    </FirebaseContext.Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
