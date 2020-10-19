@@ -106,7 +106,14 @@ const ActivitiesBase = props => {
       <Divider />
       <Heading my="1em">Activities</Heading>
       {activities.map((activity, index) => (
-        <Box mb="1em" bg="teal.300" p="1em" rounded="5px">
+        <Box
+          mb="1em"
+          border="1px"
+          borderColor="teal.300"
+          rounded="10px"
+          p="1em"
+          rounded="5px"
+        >
           <Flex mb="20px" align="center" justify="space-between">
             <Text fontSize="lg" mr="1em" w="15%">
               Activity Name:
