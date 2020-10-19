@@ -33,9 +33,7 @@ const SignInFormBase = props => {
   const [error, setError] = useState({});
   const { handleSubmit, errors, register, formState } = useForm();
   const onSubmit = values => {
-    console.log(values);
     const { email, password } = values;
-    console.log(props.firebase.createUserWithEmailAndPassword);
     props.firebase
       .signInWithEmailAndPassword(email, password)
       .then(authUser => {
