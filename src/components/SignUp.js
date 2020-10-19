@@ -47,7 +47,6 @@ const SignUpFormBase = props => {
         });
       })
       .then(() => {
-        console.log('LKSJDFLKJ');
         props.history.push(ROUTES.HOME);
       })
       .catch(err => {
